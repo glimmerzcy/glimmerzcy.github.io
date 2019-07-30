@@ -74,7 +74,7 @@
                         width: 200px;
                         height: 50px;
                         display: block;
-                        background: url('/imgs/12.jpg') no-repeat;
+                        background: url('/imgs/xsbg.gif') no-repeat;
                     }
                 </style>
                     
@@ -113,10 +113,22 @@
                 
                 
                 
-                <li class="">
-                    <a href="/tags">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-tags"></i>标签
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/测试文章/">测试文章</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
@@ -176,10 +188,6 @@
             
              
                         <a href="/2019/07/30/testt/">testt</a>
-                        <br>
-            
-             
-                        <a href="/2019/07/30/hello-world/">Hello World</a>
                         <br>
             
                     </div>
@@ -252,12 +260,6 @@
                 </span>
             </li>
             
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/30/hello-world/">Hello World</a>
-                </span>
-            </li>
-            
         </ul>
     </div>
 </aside>
@@ -273,12 +275,6 @@
         </div>
         <ul class="list-group list-group-flush">
             
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/30/hello-world/">Hello World</a>
-                </span>
-            </li>
             
             <li class="list-group-item">
                 <span class="post-title">
@@ -320,6 +316,8 @@
             <div class="tab-content">
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/测试文章/" style="font-size: 12.690351040276887px;" class="tag-cloud-link">测试文章</a>
     
 </div>
                 

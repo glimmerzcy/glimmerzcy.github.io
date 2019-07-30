@@ -74,7 +74,7 @@
                         width: 200px;
                         height: 50px;
                         display: block;
-                        background: url('/imgs/12.jpg') no-repeat;
+                        background: url('/imgs/xsbg.gif') no-repeat;
                     }
                 </style>
                     
@@ -113,10 +113,22 @@
                 
                 
                 
-                <li class="">
-                    <a href="/tags">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-tags"></i>标签
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/测试文章/">测试文章</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
@@ -155,6 +167,13 @@
         <div class="tag-article">
             
             <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/测试文章/">测试文章</a>
+                
+            </span>
+            
+            <span class="label label-gal">
                 <i class="fa fa-calendar"></i> 2019-07-30
             </span>
             
@@ -173,12 +192,17 @@
             </p>
             <p>
                 
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/测试文章/">测试文章</a>
+                
+                
                 
             </p>
         </center>
     </div>
     <div class="content-article">
-        <h1 id="测试二"><a href="#测试二" class="headerlink" title="测试二"></a>测试二</h1><h2 id="第二篇测试"><a href="#第二篇测试" class="headerlink" title="第二篇测试"></a>第二篇测试</h2>
+        <h2 id="第二篇测试"><a href="#第二篇测试" class="headerlink" title="第二篇测试"></a>第二篇测试</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 贪心错解</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2005</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> val[N], a[N], b[N];</span><br><span class="line"><span class="keyword">int</span> ma[N &lt;&lt; <span class="number">2</span>], id[N &lt;&lt; <span class="number">2</span>];</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ls (root &lt;&lt; 1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rs (root &lt;&lt; 1 | 1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mid ((l + r) &gt;&gt; 1)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> root, <span class="keyword">int</span> i, <span class="keyword">int</span> k, <span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (k &gt; ma[root]) &#123;ma[root] = k, id[root] = i;&#125;</span><br><span class="line">    <span class="keyword">if</span> (l == r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (val &lt;= mid) update(l, mid, ls, i, k, val);</span><br><span class="line">    <span class="keyword">else</span> update(mid + <span class="number">1</span>, r, rs, i, k, val);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qurey</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> root, <span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (val &lt; l) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (r &lt;= val) <span class="keyword">return</span> root;</span><br><span class="line">    <span class="keyword">int</span> a = qurey(l, mid, ls, val);</span><br><span class="line">    <span class="keyword">int</span> b = qurey(mid + <span class="number">1</span>, r, rs, val);</span><br><span class="line">    <span class="keyword">return</span> (ma[a] &gt; ma[b] ? a : b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> pre[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> siz)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(ma, <span class="number">0</span>, <span class="keyword">sizeof</span> ma);</span><br><span class="line">    <span class="built_in">memset</span>(id, <span class="number">0</span>, <span class="keyword">sizeof</span> id);</span><br><span class="line">    <span class="built_in">memset</span>(pre, <span class="number">0</span>, <span class="keyword">sizeof</span> pre);</span><br><span class="line">    <span class="keyword">int</span> rt, ff, maxnum = <span class="number">0</span>, maxid = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (b[i] == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">        rt = qurey(<span class="number">1</span>, siz, <span class="number">1</span>, b[i]);</span><br><span class="line">        pre[i] = id[rt];</span><br><span class="line">        ff = ma[rt] + a[b[i]];</span><br><span class="line">        <span class="comment">// cout &lt;&lt; i &lt;&lt; " " &lt;&lt; ff &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">if</span> (ff &gt; maxnum) maxnum = ff, maxid = i;</span><br><span class="line">        update(<span class="number">1</span>, siz, <span class="number">1</span>, i, ff, b[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (maxid) b[maxid] = <span class="number">0</span>, maxid = pre[maxid];</span><br><span class="line">    <span class="keyword">return</span> maxnum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">NULL</span>);</span><br><span class="line">    <span class="keyword">int</span> t, n, k, siz;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++)</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; val[i], a[i] = val[i];</span><br><span class="line">        sort(a + <span class="number">1</span>, a + n + <span class="number">1</span>);</span><br><span class="line">        siz = unique(a + <span class="number">1</span>, a + n + <span class="number">1</span>) - a;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++)   </span><br><span class="line">            b[i] = lower_bound(a + <span class="number">1</span>, a + siz + <span class="number">1</span>, val[i]) - a;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (k--) ans += solve(n, siz);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 </article>
 
@@ -249,12 +273,6 @@
                 </span>
             </li>
             
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/30/hello-world/">Hello World</a>
-                </span>
-            </li>
-            
         </ul>
     </div>
 </aside>
@@ -270,12 +288,6 @@
         </div>
         <ul class="list-group list-group-flush">
             
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/30/hello-world/">Hello World</a>
-                </span>
-            </li>
             
             <li class="list-group-item">
                 <span class="post-title">
@@ -317,6 +329,8 @@
             <div class="tab-content">
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/测试文章/" style="font-size: 12.488028204447314px;" class="tag-cloud-link">测试文章</a>
     
 </div>
                 

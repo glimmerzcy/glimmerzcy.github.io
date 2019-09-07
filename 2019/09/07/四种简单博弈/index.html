@@ -10,7 +10,7 @@
     
     
     
-    <title>tags: 标签2 | ZCY的博客</title>
+    <title>四种简单博弈 | ZCY的博客</title>
     <link href="”http://yoursite.com“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -35,7 +35,7 @@
       if (document.images) {
         var avatar = new Image();
         avatar.src = '/imgs/1.jpeg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg,preview16.jpg,preview17.jpg,preview18.jpg,preview19.jpg,preview20.jpg,preview21.jpg,preview22.jpg,preview23.jpg,preview24.jpg'.split(',')
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg,preview16.jpg,preview17.jpg,preview18.jpg,preview19.jpg,preview20.jpg,preview21.jpg,preview22.jpg,preview23.jpg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -104,38 +104,10 @@
                 
                 
                 
-                <li class="dropdown">
-                    <!-- TODO 添加hover dropdown效果 -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <li class="">
+                    <a href="/categories">
                         <i class="fa fa-list"></i>分类
                     </a>
-                    <ul class="dropdown-menu">
-                        
-                        
-                        <li>
-                            <a href="/categories/测试文章/">测试文章</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/分类1/">分类1</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/杂谈/">杂谈</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/分类1/分类2/">分类2</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/categories/分类1/分类2/分类3/">分类3</a>
-                        </li>
-                        
-                        
-                        
-                    </ul>
                 </li>
                 
                 
@@ -152,21 +124,17 @@
                         
                         
                         <li>
-                            <a href="/tags/测试/">测试</a>
+                            <a href="/tags/莫比乌斯反演/">莫比乌斯反演</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/标签1/">标签1</a>
+                            <a href="/tags/杂谈/">杂谈</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/标签2/">标签2</a>
+                            <a href="/tags/博弈论/">博弈论</a>
                         </li>
                         
-                        
-                        <li>
-                            <a href="/tags">...</a>
-                        </li>
                         
                         
                     </ul>
@@ -190,19 +158,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-tag">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://yoursite.com">ZCY的博客</a>
         >
-        <span>标签</span>
+        <span>四种简单博弈</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/标签2/index.html">标签2</a>
+                <a href="/2019/09/07/四种简单博弈/">四种简单博弈</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/博弈论/">博弈论</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-09-07
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -210,21 +193,45 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/标签2/index.html">标签2</a>
+                    <a href="/2019/09/07/四种简单博弈/">四种简单博弈</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-09-07
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/博弈论/">博弈论</a>
+                
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2019/07/31/photo/">photo</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <p>&emsp;&emsp;今天遇到了斐波那契博弈自己瞎搞了半天还是推错了规律，没想到是个经典问题，来学习一下。</p>
+<p>这四个取物博弈均为：两人取一堆物品，取走最后一个者胜，两人轮流取。</p>
+<h2 id="1-巴什博弈"><a href="#1-巴什博弈" class="headerlink" title="1. 巴什博弈"></a>1. 巴什博弈</h2><p>规则：每次取物品数量在 <strong>1 到 m</strong><br>若物品有 <strong>m + 1</strong> 个则第一个人无论怎样取，第二个人都可以取完<br>故若 <strong>n % (m + 1) == 0</strong> 每一轮第二个人都能使物品商量为 m + 1 的倍数，从而最终获胜；反之，第一个人取一次使得物品数量为 m + 1 的倍数，最终获胜。</p>
+<h2 id="2-威佐夫博弈"><a href="#2-威佐夫博弈" class="headerlink" title="2. 威佐夫博弈"></a>2. 威佐夫博弈</h2><p>规则：每次从一堆或两堆中取相同数量的物品，最少一个，多者不限<br>解法：明天更</p>
+<h2 id="3-尼姆博弈"><a href="#3-尼姆博弈" class="headerlink" title="3. 尼姆博弈"></a>3. 尼姆博弈</h2><p>明天更</p>
+<h2 id="4-斐波那契博弈"><a href="#4-斐波那契博弈" class="headerlink" title="4. 斐波那契博弈"></a>4. 斐波那契博弈</h2><p>规则：第一次至少取一个且不能取完，以后每次至少一个，至多是上一次对方取物的两倍<br>物品数量为斐波那契数时，该人必败，否则必胜。</p>
+<p>困了，明天早起打银川<del>辣鸡</del>网络重赛</p>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = '四种简单博弈'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -275,25 +282,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2019/09/07/四种简单博弈/">四种简单博弈</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2019/09/07/前言/">前言</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/31/ph3/">ph3</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/31/ph2/">ph2</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/31/photo/">photo</a>
                 </span>
             </li>
             
@@ -315,24 +310,6 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/07/31/ph3/">ph3</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/31/ph2/">ph2</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/07/31/photo/">photo</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2019/09/07/tt/">莫比乌斯反演入门</a>
                 </span>
             </li>
@@ -340,6 +317,12 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2019/09/07/前言/">前言</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/09/07/四种简单博弈/">四种简单博弈</a>
                 </span>
             </li>
             
@@ -354,17 +337,17 @@
 
                 
                 <li>
-                    <a href="/tags/标签2/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/09/07/四种简单博弈/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/标签2/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/09/07/四种简单博弈/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/标签2/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/09/07/四种简单博弈/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -372,17 +355,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/测试/" style="font-size: 15.627116475588599px;" class="tag-cloud-link">测试</a>
+    <a href="/tags/莫比乌斯反演/" style="font-size: 14.609187597358355px;" class="tag-cloud-link">莫比乌斯反演</a>
     
-    <a href="/tags/标签1/" style="font-size: 19.008726661050517px;" class="tag-cloud-link">标签1</a>
+    <a href="/tags/杂谈/" style="font-size: 15.33652986049423px;" class="tag-cloud-link">杂谈</a>
     
-    <a href="/tags/标签2/" style="font-size: 19.199373503704876px;" class="tag-cloud-link">标签2</a>
-    
-    <a href="/tags/标签3/" style="font-size: 13.607482572544233px;" class="tag-cloud-link">标签3</a>
-    
-    <a href="/tags/莫比乌斯反演/" style="font-size: 12.31807785528883px;" class="tag-cloud-link">莫比乌斯反演</a>
-    
-    <a href="/tags/杂谈/" style="font-size: 10.633313920836642px;" class="tag-cloud-link">杂谈</a>
+    <a href="/tags/博弈论/" style="font-size: 14.163020404449266px;" class="tag-cloud-link">博弈论</a>
     
 </div>
                 
@@ -502,7 +479,7 @@
 <script src="https://myau.moe/js/comment/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = 'undefined'
+      window.commentConfig.id = 'Sat Sep 07 2019 21:36:09 GMT+0800'
       window.commentConfig.owner = 'glimmerzcy'
       window.commentConfig.repo = 'blogcomment'
       window.commentConfig.client_id = '85ece33f9aadbc660892'
@@ -510,7 +487,7 @@
       window.commentConfig.redirect_uri = 'null'
     } else {
       window.commentConfig = {
-      	id: 'undefined',
+      	id: 'Sat Sep 07 2019 21:36:09 GMT+0800',
         owner: 'glimmerzcy',
         repo: 'blogcomment',
         client_id: '85ece33f9aadbc660892',

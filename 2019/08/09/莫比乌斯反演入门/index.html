@@ -118,21 +118,25 @@
                         </li>
                         
                         <li>
-                            <a href="/categories/数学/">数学</a>
+                            <a href="/categories/分类1/">分类1</a>
                         </li>
                         
                         <li>
-                            <a href="/categories/分类1/">分类1</a>
+                            <a href="/categories/杂谈/">杂谈</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/数学/">数学</a>
                         </li>
                         
                         <li>
                             <a href="/categories/分类1/分类2/">分类2</a>
                         </li>
                         
-                        <li>
-                            <a href="/categories/分类1/分类2/分类3/">分类3</a>
-                        </li>
                         
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
                         
                         
                     </ul>
@@ -156,11 +160,11 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/莫比乌斯反演/">莫比乌斯反演</a>
+                            <a href="/tags/标签1/">标签1</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/标签1/">标签1</a>
+                            <a href="/tags/标签2/">标签2</a>
                         </li>
                         
                         
@@ -244,14 +248,13 @@
     </div>
     <div class="content-article">
         <h4 id="终于开写自己的第一篇博客了qaq"><a href="#终于开写自己的第一篇博客了qaq" class="headerlink" title="终于开写自己的第一篇博客了qaq"></a>终于开写自己的第一篇博客了qaq</h4><h4 id="总结一下简单的莫比乌斯吧"><a href="#总结一下简单的莫比乌斯吧" class="headerlink" title="总结一下简单的莫比乌斯吧"></a>总结一下简单的莫比乌斯吧</h4><h4 id="立个flag明天搞杜教筛"><a href="#立个flag明天搞杜教筛" class="headerlink" title="立个flag明天搞杜教筛"></a>立个flag明天搞杜教筛</h4><a id="more"></a>
-
-<p>$$\sum_{i=1}^n a_i=0$$</p>
-<h2 id="sum-i-1-n-a"><a href="#sum-i-1-n-a" class="headerlink" title="$\sum_{i=1}^n a$"></a>$\sum_{i=1}^n a$</h2><p><a href="https://blog.csdn.net/tomandjake_/article/details/81083703" target="_blank" rel="noopener">莫比乌斯反演入门讲解</a></p>
+<script type="math/tex; mode=display">\sum_{i=1}^n a_i=0</script><h2 id="sum-i-1-n-a"><a href="#sum-i-1-n-a" class="headerlink" title="$\sum_{i=1}^n a$"></a>$\sum_{i=1}^n a$</h2><p><a href="https://blog.csdn.net/tomandjake_/article/details/81083703" target="_blank" rel="noopener">莫比乌斯反演入门讲解</a></p>
 <p>莫比乌斯反演的两种形式：</p>
 <ol>
 <li>若 $F(n)=\sum_{d|n}f(n)$ 则 $f(n)=\sum_{d|n}\mu(d)F(\frac{n}{d})$</li>
 <li>若 $F(n)=\sum_{n|d}f(n)$ 则 $f(n)=\sum_{n|d}\mu(\frac{d}{n})F(d)$</li>
 </ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int __int128</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (y == <span class="number">0</span>)<span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">return</span> gcd(y, x % y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">egcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> &amp;x, <span class="keyword">int</span> &amp;y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) &#123;</span><br><span class="line">        x = <span class="number">1</span>, y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> p = egcd(b, a % b, y, x);</span><br><span class="line">    y -= a / b * x;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> k, n, m[<span class="number">15</span>], b[<span class="number">15</span>],b1, b2, m1, m2, d, p, x, y, b3, m3;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">uni</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    d = gcd(m1, m2);</span><br><span class="line">    <span class="keyword">if</span> ((b1 - b2) % d) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    egcd(m1 / d, m2 / d, x, y);</span><br><span class="line">    b3 = b1 + m1 * (b2 - b1) / d * x, m3 = m1 * m2 / d;</span><br><span class="line">    b[i] = (b3 % m3 + m3) % m3, m[i] = m3;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> temp;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; temp;</span><br><span class="line">    <span class="keyword">int</span> k = temp;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; temp, m[i] = temp;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; temp, b[i] = temp;</span><br><span class="line">        b[i] = (b[i] % m[i] + m[i]) % m[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// for (int i = 1; i &lt;= k; i ++) cout &lt;&lt; (long long)b[i] &lt;&lt; endl;</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= k; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        b1 = b[i - <span class="number">1</span>], b2 = b[i], m1 = m[i - <span class="number">1</span>], m2 = m[i];</span><br><span class="line">        <span class="keyword">if</span> (!uni(i))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"Tankernb!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> tt = b[i], mm = m[i];</span><br><span class="line">        <span class="comment">// cout &lt;&lt; tt &lt;&lt; " " &lt;&lt; mm &lt;&lt; endl;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    n = (b[k] % m[k] + m[k]) % m[k];</span><br><span class="line">    <span class="comment">// long long tt = n, mm = m[k];</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; tt &lt;&lt; " " &lt;&lt; mm &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cin &gt;&gt; temp;</span></span><br><span class="line">    n = temp;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Lbnb!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> f1 = <span class="number">1</span>, f2 = <span class="number">1</span>, f3;</span><br><span class="line">    <span class="keyword">while</span> (f2 &lt; n)</span><br><span class="line">    &#123;</span><br><span class="line">        f3 = f1 + f2;</span><br><span class="line">        f1 = f2, f2 = f3;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (f3 == n) <span class="built_in">cout</span> &lt;&lt; <span class="string">"Lbnb!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">"Zgxnb!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 </article>
@@ -310,6 +313,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2019/09/07/前言/">前言</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2019/08/09/莫比乌斯反演入门/">莫比乌斯反演入门</a>
                 </span>
             </li>
@@ -362,13 +371,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/08/09/莫比乌斯反演入门/">莫比乌斯反演入门</a>
+                    <a href="/2019/07/31/photo/">photo</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/07/31/photo/">photo</a>
+                    <a href="/2019/09/07/前言/">前言</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/08/09/莫比乌斯反演入门/">莫比乌斯反演入门</a>
                 </span>
             </li>
             
@@ -401,15 +416,17 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/测试/" style="font-size: 8.421438877795623px;" class="tag-cloud-link">测试</a>
+    <a href="/tags/测试/" style="font-size: 11.205321525646545px;" class="tag-cloud-link">测试</a>
     
-    <a href="/tags/莫比乌斯反演/" style="font-size: 11.72860735233601px;" class="tag-cloud-link">莫比乌斯反演</a>
+    <a href="/tags/标签1/" style="font-size: 11.318146776986655px;" class="tag-cloud-link">标签1</a>
     
-    <a href="/tags/标签1/" style="font-size: 11.242962309105675px;" class="tag-cloud-link">标签1</a>
+    <a href="/tags/标签2/" style="font-size: 12.581322647214517px;" class="tag-cloud-link">标签2</a>
     
-    <a href="/tags/标签2/" style="font-size: 10.33212818832822px;" class="tag-cloud-link">标签2</a>
+    <a href="/tags/标签3/" style="font-size: 16.417416571973813px;" class="tag-cloud-link">标签3</a>
     
-    <a href="/tags/标签3/" style="font-size: 17.786686962401053px;" class="tag-cloud-link">标签3</a>
+    <a href="/tags/杂谈/" style="font-size: 13.035462365507591px;" class="tag-cloud-link">杂谈</a>
+    
+    <a href="/tags/莫比乌斯反演/" style="font-size: 19.94319680757686px;" class="tag-cloud-link">莫比乌斯反演</a>
     
 </div>
                 
@@ -457,7 +474,23 @@
 <div id="gal-gotop">
     <i class="fa fa-angle-up"></i>
 </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"live2d-widget-model-z16"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
 <script src="/js/activate-power-mode.js"></script>
 <script>
 
@@ -518,7 +551,7 @@
       window.commentConfig.repo = 'blogcomment'
       window.commentConfig.client_id = '85ece33f9aadbc660892'
       window.commentConfig.client_secret = 'c3c7fa9da043ccbb8fbef9d8051d4333c7aa23ad'
-      window.commentConfig.redirect_uri = ''
+      window.commentConfig.redirect_uri = 'null'
     } else {
       window.commentConfig = {
       	id: 'Fri Aug 09 2019 23:28:04 GMT+0800',
@@ -526,7 +559,7 @@
         repo: 'blogcomment',
         client_id: '85ece33f9aadbc660892',
         client_secret: 'c3c7fa9da043ccbb8fbef9d8051d4333c7aa23ad',
-        redirect_uri: ''
+        redirect_uri: 'null'
       }
     }
 </script>
